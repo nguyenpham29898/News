@@ -31,7 +31,27 @@ export default class NewsRelated extends Component {
   };
   render() {
     return (
-
+      <div className="card">
+        <Link
+          to={
+            "/news-detail/" +
+            this.convertUrl(this.props.tieuDe) +
+            "." +
+            this.props.tinId +
+            ".html"
+          }
+        >
+          <img
+            className="card-img-top"
+            src={this.props.anh}
+            alt="react router demo"
+          />
+        </Link>
+        <div className="card-body">
+          <h4 className="card-title">{this.props.tieuDe}</h4>
+          <p className="card-text">{this.props.trichDan}</p>
+        </div>
+      </div>
     );
   }
 }
